@@ -82,14 +82,14 @@ file(GLOB_RECURSE EXTRAS_INCLUDES
 )
 
 set (ZLIB_SOURCES
-    ${PROJECT_SOURCE_DIR}/include/beast/detail/zlib/deflate.cpp
-    ${PROJECT_SOURCE_DIR}/include/beast/detail/zlib/inffast.cpp
-    ${PROJECT_SOURCE_DIR}/include/beast/detail/zlib/inflate.cpp
+    ${PROJECT_SOURCE_DIR}/include/beast/detail/zlib/impl/deflate.cpp
+    ${PROJECT_SOURCE_DIR}/include/beast/detail/zlib/impl/inffast.cpp
+    ${PROJECT_SOURCE_DIR}/include/beast/detail/zlib/impl/inflate.cpp
     )
 
 #add_subdirectory (examples)
 #add_subdirectory (test)
 #add_subdirectory (test/core)
-add_subdirectory (test/detail)
 #add_subdirectory (test/http)
 #add_subdirectory (test/websocket)
+add_subdirectory (test/detail)
