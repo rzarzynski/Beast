@@ -13,10 +13,6 @@ compile version.cpp : : ;
 compile websocket.cpp : : ;
 compile zlib.cpp : : ;
 
-zlib_sources =
-    ../include/beast/detail/zlib/impl/deflate.cpp
-    ;
-
 #unit-test core-tests :
 #    $(zlib_sources)
 #    ../extras/beast/unit_test/main.cpp
@@ -46,7 +42,6 @@ zlib_sources =
 #    ;
 
 unit-test detail-tests :
-    $(zlib_sources)
     ../extras/beast/unit_test/main.cpp
     detail/zlib.cpp
     ;
