@@ -68,10 +68,14 @@ include_directories (extras)
 include_directories (include)
 
 file(GLOB_RECURSE BEAST_INCLUDES
-    ${PROJECT_SOURCE_DIR}/include/beast/*.hpp
-    ${PROJECT_SOURCE_DIR}/include/beast/*.ipp
-    ${PROJECT_SOURCE_DIR}/extras/beast/*.hpp
-    ${PROJECT_SOURCE_DIR}/extras/beast/*.ipp
+    ${PROJECT_SOURCE_DIR}/include/*.hpp
+    ${PROJECT_SOURCE_DIR}/include/*.ipp
+)
+
+file(GLOB_RECURSE EXTRAS_INCLUDES
+    ${PROJECT_SOURCE_DIR}/extras/*.hpp
+    ${PROJECT_SOURCE_DIR}/extras/*.ipp
+    ${PROJECT_SOURCE_DIR}/extras/README.md
 )
 
 add_subdirectory (examples)
@@ -79,5 +83,3 @@ add_subdirectory (test)
 add_subdirectory (test/core)
 add_subdirectory (test/http)
 add_subdirectory (test/websocket)
-
-#enable_testing()
